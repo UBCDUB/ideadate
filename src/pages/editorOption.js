@@ -1,7 +1,8 @@
 import React, { Components } from "react";
 import { Provider } from "react-redux";
 import store from "./store";
-import showResults from "./showResults";
+import showProj from "./showResults_proj";
+import showUser from "./showResults_user";
 import UserForm from "./userForm";
 import ProjForm from './projForm';
 import NoteForm from './noteForm';
@@ -11,7 +12,7 @@ const userCreate = () => {
     <Provider store={store}>
     <div style={{ padding: 15 }}>
       <h2>Simple Form</h2>
-      <UserForm onSubmit={showResults} />
+      <UserForm onSubmit={showUser} />
       {/* <Values form="simple" /> */}
     </div>
   </Provider>
@@ -50,7 +51,7 @@ const projCreate = () => {
     <Provider store={store}>
     <div style={{ padding: 15 }}>
       <h2>Simple Form</h2>
-      <ProjForm onSubmit={showResults} />
+      <ProjForm onSubmit={showProj} />
       {/* <Values form="simple" /> */}
     </div>
   </Provider>
@@ -62,7 +63,7 @@ const noteCreate = () => {
     <Provider store={store}>
     <div style={{ padding: 15 }}>
       <h2>Simple Form</h2>
-      <NoteForm onSubmit={showResults} />
+      <NoteForm onSubmit={showProj} />
       {/* <Values form="simple" /> */}
     </div>
   </Provider>
