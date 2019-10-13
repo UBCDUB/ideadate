@@ -9,6 +9,7 @@ const templatePage = () => {
             <div class = "post-container">
             <div class="image"><img src={placeholder} alt="..." class="img-thumbnail"></img></div>
             <div class="content-align">
+                <br />
                 <h2>Project</h2>
                 <ul>Project Name</ul>
                 <ul>Keyword (Tags)</ul>
