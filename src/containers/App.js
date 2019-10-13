@@ -7,6 +7,9 @@ import Layout from '../components/Layout/Layout';
 // for dev purposes only (delete later)
 import hackerBacker from '../pages/hackerBacker';
 import template from '../pages/template';
+import hacker from '../pages/hacker';
+import backer from '../pages/backer';
+
 import { 
   BrowserRouter as Router,
   Switch,
@@ -41,6 +44,10 @@ function App() {
               <Route path='/hackerBacker' component={hackerBacker}>
               </Route>
               <Route path='/template' component={template}>
+              </Route>
+              <Route path='/hacker' component={hacker}>
+              </Route>
+              <Route path='/backer' component={backer}>
               </Route>
             </Switch>
           </div>

@@ -10,14 +10,14 @@ const hackerBacker = () => {
                 Choose your class
             </b>
             <ul>
-                <li>
-                    Hacker
-                </li>
-                <li>
-                    Backer
-                </li>
+            <a href="/hacker" class="btn btn-info" role="button">Hacker</a>
             </ul>
+            <ul>
+            <a href="/backer" class="btn btn-info" role="button">Backer</a>
+            </ul>
+            <ul>
             <Button>Next</Button>
+            </ul>
         </div>
     )
 }
