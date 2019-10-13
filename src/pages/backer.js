@@ -1,5 +1,6 @@
 // template page
 import React from 'react';
+import './backer.css';
 
 const backer = () => {
     return (
