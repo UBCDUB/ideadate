@@ -27,7 +27,7 @@ const noteForm = props => {
             float="What improvements do you want to bring to the project?"
             multiLine={true} 
             rows="5"
-            multiLine/>
+            fullWidth/>
         </div>
       </div>
       <div>
