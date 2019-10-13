@@ -5,6 +5,12 @@ import "circular-std"
 // for dev purposes only (delete later)
 import hackerBacker from '../pages/hackerBacker';
 import template from '../pages/template';
+import hacker from '../pages/hacker';
+import backer from '../pages/backer';
+import newProj from '../pages/newProj';
+import collab from '../pages/collab';
+import collabReq from '../pages/collabReq';
+import ideaPitched from '../pages/ideaPitched';
 import textInput from '../pages/text-input';
 import editorOption from '../pages/editorOption';
 import { 
@@ -48,6 +54,18 @@ function App() {
               <Route path='/hackerBacker' component={hackerBacker}>
               </Route>
               <Route path='/template' component={template}>
+              </Route>
+              <Route path='/hacker' component={hacker}>
+              </Route>
+              <Route path='/backer' component={backer}>
+              </Route>
+              <Route path='/newProj' component={newProj}>
+              </Route>
+              <Route path='/collab' component={collab}>
+              </Route>
+              <Route path='/ideaPitched' component={ideaPitched}>
+              </Route>
+              <Route path='/collabReq' component={collabReq}>
               </Route>
               <Route path='/editorOption' component={editorOption}></Route>
               <Route path='/text-input' component={textInput}></Route>
