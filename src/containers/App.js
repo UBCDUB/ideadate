@@ -10,7 +10,7 @@ import backer from '../pages/backer';
 import collab from '../pages/collab';
 import collabReq from '../pages/collabReq';
 import ideaPitched from '../pages/ideaPitched';
-import projectView from '../pages/projectView';
+import projForm from '../pages/projForm';
 import { userCreate, projCreate, noteCreate } from '../pages/editorOption';
 import { 
   BrowserRouter as Router,
@@ -34,7 +34,7 @@ function App() {
               <ul>
                 <li><Link to='/hackerBacker'>hackerBacker</Link></li>
                 <li><Link to='/template'>template page</Link></li>
-                <li><Link to='/projectView'>projectView</Link></li>
+                <li><Link to='/projForm'>projForm</Link></li>
                 <li><Link to='/collabReq'>collabReq</Link></li>
                 <li><Link to='/projCreate'>Create a Project</Link></li>
                 <li><Link to='/userCreate'>Create a User</Link></li>
@@ -54,7 +54,7 @@ function App() {
               <Route path='/collab' component={collab}></Route>
               <Route path='/ideaPitched' component={ideaPitched}></Route>
               <Route path='/collabReq' component={collabReq}></Route>
-              <Route path='/projectView' component={projectView}></Route>
+              <Route path='/projForm' component={projForm}></Route>
               <Route path='/userCreate' component={userCreate}></Route>
               <Route path='/noteCreate' component={noteCreate}></Route>
             </Switch>
