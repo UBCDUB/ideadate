@@ -51,7 +51,7 @@ function App() {
               <Route path='/hacker' component={hacker}></Route>
               <Route path='/backer' component={backer}> </Route>
               <Route path='/projCreate' component={projCreate}></Route>
-              <Route path='/collab' component={collab}></Route>
+              <Route path='/collab' component={collab} ></Route>
               <Route path='/ideaPitched' component={ideaPitched}></Route>
               <Route path='/collabReq' component={collabReq}></Route>
               <Route path='/projectView' component={projectView}></Route>
