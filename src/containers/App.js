@@ -7,12 +7,10 @@ import hackerBacker from '../pages/hackerBacker';
 import template from '../pages/template';
 import hacker from '../pages/hacker';
 import backer from '../pages/backer';
-import newProj from '../pages/newProj';
 import collab from '../pages/collab';
 import collabReq from '../pages/collabReq';
 import ideaPitched from '../pages/ideaPitched';
-import textInput from '../pages/text-input';
-import editorOption from '../pages/editorOption';
+import { userCreate, projCreate, noteCreate } from '../pages/editorOption';
 import { 
   BrowserRouter as Router,
   Switch,
@@ -33,21 +31,15 @@ function App() {
           <div>
             <nav>
               <ul>
-                <li>
-                  <Link to='/hackerBacker'>hackerBacker</Link>
-                </li>
-                <li>
-                  <Link to='/template'>template page</Link>
-                </li>
-                <li>
-                  <Link to='/text-input'>Text input exp</Link>
-                </li>
-                <li>
-                  <Link to='/editorOption'>Text input 2</Link>
-                </li>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
+                <li><Link to='/hackerBacker'>hackerBacker</Link></li>
+                <li><Link to='/template'>template page</Link></li>
+                <li><Link to='/projCreate'>Create a Project</Link></li>
+                <li><Link to='/userCreate'>Create a User</Link></li>
+                <li><Link to="/noteCreate">Send a Note (after 'liking' proj)</Link></li>
+                <li><Link to="/collab">Collab</Link></li>
+                <li><Link to="/hacker">Hacker</Link></li>
+                <li><Link to="/backer">Backer</Link></li>
+                <li><Link to="/">Home</Link></li>
               </ul>
             </nav>
             <Switch>
@@ -59,7 +51,7 @@ function App() {
               </Route>
               <Route path='/backer' component={backer}>
               </Route>
-              <Route path='/newProj' component={newProj}>
+              <Route path='/projCreate' component={projCreate}>
               </Route>
               <Route path='/collab' component={collab}>
               </Route>
@@ -67,8 +59,8 @@ function App() {
               </Route>
               <Route path='/collabReq' component={collabReq}>
               </Route>
-              <Route path='/editorOption' component={editorOption}></Route>
-              <Route path='/text-input' component={textInput}></Route>
+              <Route path='/userCreate' component={userCreate}></Route>
+              <Route path='/noteCreate' component={noteCreate}></Route>
             </Switch>
           </div>
         </Router>
