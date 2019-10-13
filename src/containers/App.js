@@ -10,6 +10,9 @@ import backer from '../pages/backer';
 import collab from '../pages/collab';
 import collabReq from '../pages/collabReq';
 import ideaPitched from '../pages/ideaPitched';
+import textInput from '../pages/text-input';
+import editorOption from '../pages/editorOption';
+import projectView from '../pages/projectView';
 import { userCreate, projCreate, noteCreate } from '../pages/editorOption';
 import { 
   BrowserRouter as Router,
@@ -31,6 +34,27 @@ function App() {
           <div>
             <nav>
               <ul>
+                <li>
+                  <Link to='/hackerBacker'>hackerBacker</Link>
+                </li>
+                <li>
+                  <Link to='/template'>template page</Link>
+                </li>
+                <li>
+                  <Link to='/text-input'>Text input exp</Link>
+                </li>
+                <li>
+                  <Link to='/editorOption'>Text input 2</Link>
+                </li>
+                <li>
+                  <Link to='/projectView'>projectView</Link>
+                </li>
+                <li>
+                  <Link to='/collabReq'>collabReq</Link>
+                </li>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
                 <li><Link to='/hackerBacker'>hackerBacker</Link></li>
                 <li><Link to='/template'>template page</Link></li>
                 <li><Link to='/projCreate'>Create a Project</Link></li>
@@ -59,6 +83,9 @@ function App() {
               </Route>
               <Route path='/collabReq' component={collabReq}>
               </Route>
+              <Route path='/editorOption' component={editorOption}></Route>
+              <Route path='/text-input' component={textInput}></Route>
+              <Route path='/projectView' component={projectView}></Route>
               <Route path='/userCreate' component={userCreate}></Route>
               <Route path='/noteCreate' component={noteCreate}></Route>
             </Switch>
