@@ -6,7 +6,7 @@ const userForm = props => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>First Name</label>
+        <label>What's your name?</label>
         <div>
           <Field
             name="name"
@@ -16,7 +16,7 @@ const userForm = props => {
           />
         </div>
       </div>
-      <div>
+      {/* <div>
         <label>Email</label>
         <div>
           <Field
@@ -26,12 +26,23 @@ const userForm = props => {
             placeholder="Email"
           />
         </div>
-      </div>
+      </div> */}
       <div>
-        <label>UserID</label>
+        <label>Choose your username</label>
         <div>
           <Field
-            name="userid"
+            name="username"
+            component="input"
+            type="userid"
+            placeholder="UserID"
+          />
+        </div>
+      </div>
+      <div>
+        <label>Github Account</label>
+        <div>
+          <Field
+            name="github"
             component="input"
             type="userid"
             placeholder="UserID"
@@ -80,9 +91,15 @@ const userForm = props => {
         </div>
       </div>
       <div>
-        <label>About You</label>
+        <label>Talk about yourself</label>
         <div>
-          <Field name="notes" component="textarea" />
+          <Field name="about" component="textarea" />
+        </div>
+      </div>
+      <div>
+        <label>What technology do you know?</label>
+        <div>
+          <Field name="techstack" component="textarea" placeholder="ex) html/css; React; MongoDB;"/>
         </div>
       </div>
       <div>
