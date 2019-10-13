@@ -9,25 +9,25 @@ const userForm = props => {
         <label>What's your name?</label>
         <div>
           <Field
-            name="name"
+            name="Name"
             component="input"
             type="text"
             placeholder="First Name"
           />
         </div>
       </div>
-      {/* <div>
+      <div>
         <label>Email</label>
         <div>
           <Field
-            name="email"
+            name="Email"
             component="input"
             type="email"
             placeholder="Email"
           />
         </div>
-      </div> */}
-      <div>
+      </div>
+      {/* <div>
         <label>Choose your username</label>
         <div>
           <Field
@@ -37,12 +37,12 @@ const userForm = props => {
             placeholder="UserID"
           />
         </div>
-      </div>
+      </div> */}
       <div>
         <label>Github Account</label>
         <div>
           <Field
-            name="github"
+            name="Github"
             component="input"
             type="userid"
             placeholder="UserID"
@@ -54,7 +54,7 @@ const userForm = props => {
         <div>
           <label>
             <Field
-              name="role"
+              name="Role"
               component="input"
               type="radio"
               value="designer"
@@ -63,7 +63,7 @@ const userForm = props => {
           </label>
           <label>
             <Field
-              name="role"
+              name="Role"
               component="input"
               type="radio"
               value="frontend-dev"
@@ -72,7 +72,7 @@ const userForm = props => {
           </label>
           <label>
             <Field
-              name="role"
+              name="Role"
               component="input"
               type="radio"
               value="backend-dev"
@@ -81,7 +81,7 @@ const userForm = props => {
           </label>
           <label>
             <Field
-              name="role"
+              name="Role"
               component="input"
               type="radio"
               value="project-manager"
@@ -93,13 +93,13 @@ const userForm = props => {
       <div>
         <label>Talk about yourself</label>
         <div>
-          <Field name="about" component="textarea" />
+          <Field name="Description" component="textarea" />
         </div>
       </div>
       <div>
         <label>What technology do you know?</label>
         <div>
-          <Field name="techstack" component="textarea" placeholder="ex) html/css; React; MongoDB;"/>
+          <Field name="TechStack" component="textarea" placeholder="ex) html/css; React; MongoDB;"/>
         </div>
       </div>
       <div>

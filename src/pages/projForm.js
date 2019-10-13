@@ -8,8 +8,17 @@ const userForm = props => {
       <div>
         <label>Project titles</label>
         <div>
+          <label>What's your github username?</label>
           <Field
-            name="projectTitle"
+            name="Founder"
+            component="input"
+            type="text"
+            placeholder="your github username"
+          />
+        </div>
+        <div>
+          <Field
+            name="Name"
             component="input"
             type="text"
             placeholder="Name your idea!"
@@ -20,7 +29,7 @@ const userForm = props => {
         <label>Link us to the Github repo!</label>
         <div>
           <Field
-            name="githubURL"
+            name="GitHubURL"
             component="input"
             type="text"
             placeholder="https://github.com/UBCDUB/ideadate"
@@ -30,15 +39,15 @@ const userForm = props => {
       <div>
         <label>Provide a short pitch for your project!</label>
         <div>
-          <Field name="projDescription" component="textarea" placeholder="Hacking anywhere with anybody!"/>
+          <Field name="Description" component="textarea" placeholder="Hacking anywhere with anybody!"/>
         </div>
       </div>
-      <div>
+      {/* <div>
         <label>What technologies do you think you'll use?</label>
         <div>
           <Field name="projTech" component="textarea" placeholder="ex) python; Machine Learning;"/>
         </div>
-      </div>
+      </div> */}
       <div>
         <button type="submit" disabled={pristine || submitting}>
           Submit
