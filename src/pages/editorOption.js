@@ -69,11 +69,14 @@ const projCreate = () => {
 const noteCreate = () => {
   return (
     <Provider store={store}>
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
     <div style={{ padding: 15 }}>
-      <h2>Simple Form</h2>
+      <h2>Send a note to the Hacker!</h2>
+      <h4>What improvements do you want to bring to the project?</h4>
       <NoteForm onSubmit={showProj} />
       {/* <Values form="simple" /> */}
     </div>
+    </MuiThemeProvider>
   </Provider>
   )
 };
