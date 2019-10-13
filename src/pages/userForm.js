@@ -1,5 +1,5 @@
 import React from 'react'
-import { Field, reduxForm } from 'redux-form'
+import { Field, FieldArray, reduxForm } from 'redux-form'
 
 const userForm = props => {
   const { handleSubmit, pristine, reset, submitting } = props
@@ -9,25 +9,25 @@ const userForm = props => {
         <label>What's your name?</label>
         <div>
           <Field
-            name="name"
+            name="Name"
             component="input"
             type="text"
             placeholder="First Name"
           />
         </div>
       </div>
-      {/* <div>
+      <div>
         <label>Email</label>
         <div>
           <Field
-            name="email"
+            name="Email"
             component="input"
             type="email"
             placeholder="Email"
           />
         </div>
-      </div> */}
-      <div>
+      </div>
+      {/* <div>
         <label>Choose your username</label>
         <div>
           <Field
@@ -37,15 +37,15 @@ const userForm = props => {
             placeholder="UserID"
           />
         </div>
-      </div>
+      </div> */}
       <div>
         <label>Github Account</label>
         <div>
           <Field
-            name="github"
+            name="Github"
             component="input"
             type="userid"
-            placeholder="UserID"
+            placeholder="githubID"
           />
         </div>
       </div>
@@ -54,7 +54,7 @@ const userForm = props => {
         <div>
           <label>
             <Field
-              name="role"
+              name="Role"
               component="input"
               type="radio"
               value="designer"
@@ -63,7 +63,7 @@ const userForm = props => {
           </label>
           <label>
             <Field
-              name="role"
+              name="Role"
               component="input"
               type="radio"
               value="frontend-dev"
@@ -72,7 +72,7 @@ const userForm = props => {
           </label>
           <label>
             <Field
-              name="role"
+              name="Role"
               component="input"
               type="radio"
               value="backend-dev"
@@ -81,7 +81,7 @@ const userForm = props => {
           </label>
           <label>
             <Field
-              name="role"
+              name="Role"
               component="input"
               type="radio"
               value="project-manager"
@@ -93,13 +93,16 @@ const userForm = props => {
       <div>
         <label>Talk about yourself</label>
         <div>
-          <Field name="about" component="textarea" />
+          <Field name="Description" component="textarea" />
         </div>
       </div>
       <div>
         <label>What technology do you know?</label>
         <div>
-          <Field name="techstack" component="textarea" placeholder="ex) html/css; React; MongoDB;"/>
+          <FieldArray name="Techstack" component={renderTech} />
+        </div>
+        <div>
+          <Field name="Techstack" component="textarea" placeholder="ex) html/css; React; MongoDB;"/>
         </div>
       </div>
       <div>
@@ -113,6 +116,42 @@ const userForm = props => {
     </form>
   )
 }
+
+const renderField = ({ input, label, type, meta: { touched, error } }) => (
+  <div>
+    <label>{label}</label>
+    <div>
+      <input {...input} type={type} placeholder={label} />
+      {touched && error && <span>{error}</span>}
+    </div>
+  </div>
+)
+
+const renderTech = ({ fields, meta: { error } }) => (
+  <ul>
+    <li>
+      <button type="button" onClick={() => fields.push()}>
+        Add Hobby
+      </button>
+    </li>
+    {fields.map((tech, index) => (
+      <li key={index}>
+        {/* <button
+          type="button"
+          title="Remove techstack"
+          onClick={() => fields.remove(index)}
+        /> */}
+        <Field
+          name={tech}
+          type="text"
+          component={renderField}
+          label={`tech #${index + 1}`}
+        />
+      </li>
+    ))}
+    {error && <li className="error">{error}</li>}
+  </ul>
+)
 
 export default reduxForm({
   form: 'simple' // a unique identifier for this form
