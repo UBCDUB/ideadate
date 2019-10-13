@@ -1,10 +1,24 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import TextField from 'material-ui/TextField'
+import styled from 'styled-components'
 // import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 // import Checkbox from 'material-ui/Checkbox';
 // import SelectField from 'material-ui/SelectField';
 // import MenuItem from 'material-ui/MenuItem';
+
+const But = styled.button`
+  color: white;
+  border-radius: 8%;
+  border: 0;
+  outline: none;
+  font-family: CircularStd;
+  font-size: 1.1em;
+  box-shadow: none;
+  background-color: #9954da;
+  padding: 0.5em 0.7em 0.5em;
+  margin: 2.5em 0.7em 0.5em;
+`;
 
 const renderTextField = ({
   label, float, input, ...custom
@@ -39,6 +53,7 @@ const userForm = props => {
             component={renderTextField}
             label="your github username"
             float="your github username"
+            fullWidth
           />
         </div>
         <div>
@@ -47,6 +62,7 @@ const userForm = props => {
             component={renderTextField}
             label="Name your idea!"
             float="Name your idea!"
+            fullWidth
           />
         </div>
       </div>
@@ -58,6 +74,7 @@ const userForm = props => {
             component={renderTextField}
             label="https://github.com/UBCDUB/ideadate"
             float="Link to the github repo"
+            fullWidth
           />
         </div>
       </div>
@@ -69,7 +86,8 @@ const userForm = props => {
             label="Provide a short (or long!) pitch for your project!" 
             float="Project pitch"
             multiLine={true} 
-            row={5}/>
+            row={5}
+            fullWidth/>
         </div>
       </div>
       {/* <div>
@@ -79,12 +97,12 @@ const userForm = props => {
         </div>
       </div> */}
       <div>
-        <button type="submit" disabled={pristine || submitting}>
+        <But type="submit" disabled={pristine || submitting}>
           Submit
-        </button>
-        <button type="button" disabled={pristine || submitting} onClick={reset}>
+        </But>
+        <But type="button" disabled={pristine || submitting} onClick={reset}>
           Clear Values
-        </button>
+        </But>
       </div>
     </form>
   )

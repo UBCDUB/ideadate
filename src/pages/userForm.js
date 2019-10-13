@@ -1,10 +1,24 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import TextField from 'material-ui/TextField'
+import styled from 'styled-components'
 import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
-import Checkbox from 'material-ui/Checkbox';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+// import Checkbox from 'material-ui/Checkbox';
+// import SelectField from 'material-ui/SelectField';
+// import MenuItem from 'material-ui/MenuItem';
+
+const But = styled.button`
+  color: white;
+  border-radius: 8%;
+  border: 0;
+  outline: none;
+  font-family: CircularStd;
+  font-size: 1.1em;
+  box-shadow: none;
+  background-color: #9954da;
+  padding: 0.5em 0.7em 0.5em;
+  margin: 2.5em 0.7em 0.5em;
+`;
 
 const renderTextField = ({
   label, input, float, ...custom
@@ -38,6 +52,7 @@ const userForm = props => {
             component={renderTextField}
             label="What's your name?"
             float="What's your name?"
+            fullWidth
           />
         </div>
       </div>
@@ -49,6 +64,7 @@ const userForm = props => {
             component={renderTextField}
             label="What's your email?"
             float="What's your email?"
+            fullWidth
           />
         </div>
       </div>
@@ -71,6 +87,7 @@ const userForm = props => {
             component={renderTextField}
             label="Enter your github username."
             float="Enter your github username."
+            fullWidth
           />
         </div>
       </div>
@@ -85,36 +102,38 @@ const userForm = props => {
             <RadioButton value="project-manager" label="Project Manager" />
           </Field>
         </div>
-        <br></br>
       </div>
       <div>
+        <label><br></br></label>
         <div>
           <Field name="Description" 
           component={renderTextField} 
           label="Tell us about yourself. This can be a short sentence or a long paragraph!"
-          float="Description"
+          float="Describe yourself!"
           multiLine={true} 
-          row={7}/>
+          row={3}
+          fullWidth/>
         </div>
       </div>
       <div>
-        <label><br></br><br></br>What technology do you know?</label>
+        <label><br></br><br></br></label>
         <div>
           <Field name="TechStack" 
             component={renderTextField} 
             label="ex) html/css; React; MongoDB;" 
-            float="Technology you know?"
+            float="What technologies you know?"
             multiLine={true}
-            rows={2}/>
+            rows={3}
+            fullWidth/>
         </div>
       </div>
       <div>
-        <button type="submit" disabled={pristine || submitting}>
+        <But type="submit" disabled={pristine || submitting}>
           Submit
-        </button>
-        <button type="button" disabled={pristine || submitting} onClick={reset}>
+        </But>
+        <But type="button" disabled={pristine || submitting} onClick={reset}>
           Clear Values
-        </button>
+        </But>
       </div>
     </form>
   )
