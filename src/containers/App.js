@@ -9,6 +9,8 @@ import hackerBacker from '../pages/hackerBacker';
 import template from '../pages/template';
 import hacker from '../pages/hacker';
 import backer from '../pages/backer';
+import newProj from '../pages/newProj';
+import collab from '../pages/collab';
 
 import { 
   BrowserRouter as Router,
@@ -48,6 +50,10 @@ function App() {
               <Route path='/hacker' component={hacker}>
               </Route>
               <Route path='/backer' component={backer}>
+              </Route>
+              <Route path='/newProj' component={newProj}>
+              </Route>
+              <Route path='/collab' component={collab}>
               </Route>
             </Switch>
           </div>

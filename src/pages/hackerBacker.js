@@ -16,7 +16,7 @@ const hackerBacker = () => {
             <a href="/backer" class="btn btn-info" role="button">Backer</a>
             </ul>
             <ul>
-            <Button>Next</Button>
+            <Button>Back</Button> <Button>Next</Button>
             </ul>
         </div>
     )
