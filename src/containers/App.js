@@ -12,6 +12,7 @@ import backer from '../pages/backer';
 import newProj from '../pages/newProj';
 import collab from '../pages/collab';
 import collabReq from '../pages/collabReq';
+import ideaPitched from '../pages/ideaPitched';
 
 import { 
   BrowserRouter as Router,
@@ -55,6 +56,8 @@ function App() {
               <Route path='/newProj' component={newProj}>
               </Route>
               <Route path='/collab' component={collab}>
+              </Route>
+              <Route path='/ideaPitched' component={ideaPitched}>
               </Route>
               <Route path='/collabReq' component={collabReq}>
               </Route>

@@ -1,6 +1,5 @@
 // template page
 import React from 'react';
-import { Button } from 'react-bootstrap';
 
 const templatePage = () => {
     return (
@@ -10,7 +9,7 @@ const templatePage = () => {
                 Hello World
             </b>
             <ul>
-                <Button>Submit</Button>
+            <a href="/ideaPitched" class="btn btn-info" role="button">Submit</a>
             </ul>
         </div>
     )
