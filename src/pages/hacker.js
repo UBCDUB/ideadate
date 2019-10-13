@@ -11,7 +11,7 @@ const hacker = () => {
                 Choose your type
             </b>
             <ul>
-            <a href="/projForm" class="btn btn-info" role="button">I have an Idea</a>
+            <a href="/projCreate" class="btn btn-info" role="button">I have an Idea</a>
             </ul>
             <ul>
             <a href="/collab" class="btn btn-info" role="button">Collaborate</a>
