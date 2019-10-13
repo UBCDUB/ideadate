@@ -15,7 +15,8 @@ const userCreate = () => {
     <Provider store={store}>
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <div style={{ padding: 15}}>
-          <h2>Create your account!</h2>
+          <h3>Create your account!</h3>
+          <h4>Create your account to browse through ideas and join new teams.</h4>
           <UserForm onSubmit={showUser} />
           {/* <Values form="simple" /> */}
         </div>
@@ -56,7 +57,7 @@ const projCreate = () => {
     <Provider store={store}>
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <div style={{ padding: 15}}>
-          <h2>Create your project page!</h2>
+          <h3>Create your project page!</h3>
           <h4>Talk about your project and find potential teammates and backers!</h4>
           <ProjForm onSubmit={showProj} />
           {/* <Values form="simple" /> */}
@@ -72,7 +73,6 @@ const noteCreate = () => {
       <MuiThemeProvider muiTheme={getMuiTheme()}>
     <div style={{ padding: 15 }}>
       <h2>Send a note to the Hacker!</h2>
-      <h4>What improvements do you want to bring to the project?</h4>
       <NoteForm onSubmit={showProj} />
       {/* <Values form="simple" /> */}
     </div>

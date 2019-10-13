@@ -23,10 +23,11 @@ const noteForm = props => {
           <Field 
             name="pitchNote" 
             component={renderTextField} 
-            label="I have always been interested in this technology!" 
-            float="Why do you love this project?"
+            label="I have always been interested in this technology and would love to utilize it through a project!" 
+            float="What improvements do you want to bring to the project?"
             multiLine={true} 
-            row={10}/>
+            rows="5"
+            multiLine/>
         </div>
       </div>
       <div>
