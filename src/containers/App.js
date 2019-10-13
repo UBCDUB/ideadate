@@ -13,6 +13,8 @@ import collabReq from '../pages/collabReq';
 import ideaPitched from '../pages/ideaPitched';
 import textInput from '../pages/text-input';
 import editorOption from '../pages/editorOption';
+import projectView from '../pages/projectView';
+
 import { 
   BrowserRouter as Router,
   Switch,
@@ -46,6 +48,12 @@ function App() {
                   <Link to='/editorOption'>Text input 2</Link>
                 </li>
                 <li>
+                  <Link to='/projectView'>projectView</Link>
+                </li>
+                <li>
+                  <Link to='/collabReq'>collabReq</Link>
+                </li>
+                <li>
                   <Link to="/">Home</Link>
                 </li>
               </ul>
@@ -69,6 +77,7 @@ function App() {
               </Route>
               <Route path='/editorOption' component={editorOption}></Route>
               <Route path='/text-input' component={textInput}></Route>
+              <Route path='/projectView' component={projectView}></Route>
             </Switch>
           </div>
         </Router>
