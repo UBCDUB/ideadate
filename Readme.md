@@ -11,15 +11,16 @@ Wireframes are [here!](https://www.figma.com/file/ikyXYwyNWw9yqr0LRHUhPq/ubcidea
 - Logo
     - font: circular-std
     - font-weight: "black" or 600
+    - color: #D9BBF9, #7871AA
+    - logo_file: ideaDate.png
 - Body
     - font: circular-std
     - font-weight: 400
 
 - Color Scheme:
-    - main color:
-    - secondary colors:
-
-
+    - main color: #7871AA
+    - secondary colors: #D9BBF9
+    - other: #CCA7A2, #4E5283
 
 
 
