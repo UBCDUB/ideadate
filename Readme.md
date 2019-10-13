@@ -2,6 +2,27 @@
   Idea-Date: Find and Collaborate On Projects
 </h1>
 
+## Documentation
+
+Wireframes are [here!](https://www.figma.com/file/ikyXYwyNWw9yqr0LRHUhPq/ubcideadate?node-id=0%3A1)
+
+### Style guide
+
+- Logo
+    - font: circular-std
+    - font-weight: "black" or 600
+- Body
+    - font: circular-std
+    - font-weight: 400
+
+- Color Scheme:
+    - main color:
+    - secondary colors:
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
