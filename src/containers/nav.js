@@ -6,7 +6,7 @@ import {
     Link } from "react-router-dom";
 import projectView from '../pages/collab';
 import logo from '../design_doc/ideadatelogo.png';
-import home from './home.js'
+// import home from './home.js'
 
 import navStyles from './nav.module.scss'
 
