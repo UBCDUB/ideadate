@@ -16,9 +16,13 @@ class collabReq extends React.Component {
     render() {
         return (
             <div>
-                <center><h2>Collaboration Requested!</h2>
+
+                <h2>Collaboration Requested!</h2>
+                <div class="container">
+                    <div class="image">
                         <img src={requested} class="img-fluid" alt="Collaboration Requested"></img>
-                        </center>
+                    </div>
+                </div>
                 <br />
                 {this.getCollaborationRequestMessage()}
                 <br />
