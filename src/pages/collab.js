@@ -72,21 +72,20 @@ class collaborationPage extends Component {
 
       <center>
       <Card style={{ width: '30rem'}}>
-      <Card.Img variant="top" src="https://picsum.photos/500/600" />
       <Card.Body>
-        <Card.Title>Project Name</Card.Title>
+        <Card.Title>Project:</Card.Title>
         <Card.Text>
           {this.state.card["name"]}
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroupItem>{this.state.card["founder"]}</ListGroupItem>
-        <ListGroupItem>{this.state.card["description"]}</ListGroupItem>
-        <ListGroupItem>{this.state.card["gitHubURL"]}</ListGroupItem>
+        <ListGroupItem>{"Founder: " + this.state.card["founder"]}</ListGroupItem>
+        <ListGroupItem>{"Description: " + this.state.card["description"]}</ListGroupItem>
+        <a href={this.state.card["gitHubURL"]}><ListGroupItem>{"GitHub Link: " + this.state.card["gitHubURL"]}</ListGroupItem></a>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#" onClick={this.handleDismiss}>Card Link</Card.Link>
-        <Card.Link href="#" onClick={this.handleLike}>Another Link</Card.Link>
+        <Card.Link href="#" onClick={this.handleDismiss}>Dismiss</Card.Link>
+        <Card.Link href="#" onClick={this.handleLike}>Like</Card.Link>
       </Card.Body>
     </Card>
     </center>
