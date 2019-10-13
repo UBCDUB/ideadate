@@ -1,8 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import "circular-std"
-import Layout from '../components/Layout/Layout';
 
 // for dev purposes only (delete later)
 import hackerBacker from '../pages/hackerBacker';
@@ -13,7 +11,8 @@ import newProj from '../pages/newProj';
 import collab from '../pages/collab';
 import collabReq from '../pages/collabReq';
 import ideaPitched from '../pages/ideaPitched';
-
+import textInput from '../pages/text-input';
+import editorOption from '../pages/editorOption';
 import { 
   BrowserRouter as Router,
   Switch,
@@ -21,9 +20,10 @@ import {
   Link } from "react-router-dom";
 
 
+
 function App() {
   return (
-    <Layout>
+    <div>
       <h1>
         This is home.
       </h1>
@@ -38,6 +38,12 @@ function App() {
                 </li>
                 <li>
                   <Link to='/template'>template page</Link>
+                </li>
+                <li>
+                  <Link to='/text-input'>Text input exp</Link>
+                </li>
+                <li>
+                  <Link to='/editorOption'>Text input 2</Link>
                 </li>
                 <li>
                   <Link to="/">Home</Link>
@@ -61,11 +67,13 @@ function App() {
               </Route>
               <Route path='/collabReq' component={collabReq}>
               </Route>
+              <Route path='/editorOption' component={editorOption}></Route>
+              <Route path='/text-input' component={textInput}></Route>
             </Switch>
           </div>
         </Router>
       </b>
-    </Layout>
+    </div>
   );
 }
 
