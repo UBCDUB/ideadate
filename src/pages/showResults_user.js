@@ -1,4 +1,4 @@
-import React, { Components } from 'react';
+// import React, { Components } from 'react';
 
 // class postCall extends Components {
 //   componentDidMount() {
@@ -14,7 +14,8 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 
 export default (async function showResults(values) {
-    fetch('https://ideadate.azurewebsites.net/api/project/create', {
+  // const url = {'https://ideadate.azurewebsites.net/api/' + domain}
+    fetch('https://ideadate.azurewebsites.net/api//user/create', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

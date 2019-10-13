@@ -1,0 +1,17 @@
+body {
+    padding: 50px;
+}
+.post-container {
+    padding: 20px 2px 10px;
+    max-width: 640px;
+    display: flex;
+}
+.image {
+    margin: 20px 10px 0 0;
+    width: 150px;
+    object-fit: contain;
+    align-self: flex-start;
+}
+.content-align {
+    flex: 1 1 auto;
+}

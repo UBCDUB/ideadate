@@ -6,12 +6,17 @@ const templatePage = () => {
     return (
         <div>
             <h2>Project Submitted!</h2>
-            <img src={submitted} class="img-fluid" alt="Project Submitted">
-            </img>
+            <div class="container"><div class="image">
+                <img src={submitted} class="img-fluid" alt="Project Submitted">
+                </img>
+            </div>
+            </div>
             <ul>
-                <b>
-                    Your project has been submitted! Sit back and relax while we gather your collaborators.
+                <div class="container">
+                    <b>
+                        Your project has been submitted! <br />Sit back and relax while we gather your collaborators.
             </b>
+                </div>
             </ul>
             <ul>
                 <a href="/" class="btn btn-info" role="button">Go back home</a>
